@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34E2C51E8100FE00F4C774 /* Idea.swift */; };
 		CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9588091E62ECD60044EBB1 /* AppDelegate.swift */; };
-		CE95880C1E62ECD60044EBB1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95880B1E62ECD60044EBB1 /* FirstViewController.swift */; };
-		CE95880E1E62ECD60044EBB1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95880D1E62ECD60044EBB1 /* SecondViewController.swift */; };
 		CE9588111E62ECD60044EBB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95880F1E62ECD60044EBB1 /* Main.storyboard */; };
 		CE9588131E62ECD60044EBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9588121E62ECD60044EBB1 /* Assets.xcassets */; };
 		CE9588161E62ECD60044EBB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9588141E62ECD60044EBB1 /* LaunchScreen.storyboard */; };
 		CE9588211E62ECD70044EBB1 /* ideaHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9588201E62ECD70044EBB1 /* ideaHubTests.swift */; };
+		CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487B1E810D2100225948 /* IdeaCell.swift */; };
+		CED148801E810FE400225948 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487F1E810FE400225948 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE34E2C51E8100FE00F4C774 /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		CE9588061E62ECD60044EBB1 /* ideaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ideaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9588091E62ECD60044EBB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE95880B1E62ECD60044EBB1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CE95880D1E62ECD60044EBB1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CE9588101E62ECD60044EBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9588121E62ECD60044EBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9588151E62ECD60044EBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		CE95881C1E62ECD70044EBB1 /* ideaHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ideaHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9588201E62ECD70044EBB1 /* ideaHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ideaHubTests.swift; sourceTree = "<group>"; };
 		CE9588221E62ECD70044EBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED1487B1E810D2100225948 /* IdeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaCell.swift; sourceTree = "<group>"; };
+		CED1487F1E810FE400225948 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				CE9588091E62ECD60044EBB1 /* AppDelegate.swift */,
-				CE95880B1E62ECD60044EBB1 /* FirstViewController.swift */,
-				CE95880D1E62ECD60044EBB1 /* SecondViewController.swift */,
+				CE34E2C51E8100FE00F4C774 /* Idea.swift */,
+				CED1487B1E810D2100225948 /* IdeaCell.swift */,
+				CED1487F1E810FE400225948 /* HomeViewController.swift */,
 				CE95880F1E62ECD60044EBB1 /* Main.storyboard */,
-				CE9588121E62ECD60044EBB1 /* Assets.xcassets */,
 				CE9588141E62ECD60044EBB1 /* LaunchScreen.storyboard */,
+				CE9588121E62ECD60044EBB1 /* Assets.xcassets */,
 				CE9588171E62ECD60044EBB1 /* Info.plist */,
 			);
 			path = ideaHub;
@@ -204,9 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE95880E1E62ECD60044EBB1 /* SecondViewController.swift in Sources */,
+				CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */,
+				CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */,
 				CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */,
-				CE95880C1E62ECD60044EBB1 /* FirstViewController.swift in Sources */,
+				CED148801E810FE400225948 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83F39AXN54;
 				INFOPLIST_FILE = ideaHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -359,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83F39AXN54;
 				INFOPLIST_FILE = ideaHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -418,6 +424,7 @@
 				CE9588271E62ECD70044EBB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE9588281E62ECD70044EBB1 /* Build configuration list for PBXNativeTarget "ideaHubTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				CE95882A1E62ECD70044EBB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
