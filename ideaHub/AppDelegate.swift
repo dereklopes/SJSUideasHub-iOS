@@ -37,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if(error == nil) {
-            print("Logged in as \(user.profile.email)")
+            print("Logged in as \(user.profile.email!)")
+            // show home view
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -50,6 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // disconnect from app
+        if(error == nil) {
+            print("signed out")
+            // go back to log in view
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+        } else {
+            print("\(error.localizedDescription)")
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

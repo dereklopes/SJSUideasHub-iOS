@@ -9,13 +9,13 @@
 import UIKit
 
 class Idea: NSObject {
-    var id: Int?
-    var title: String?
-    var content: String?
-    var date: String?
-    var category: String?
-    var likes: Int?
-    var author: String?
+    var id: Int
+    var title: String
+    var content: String
+    var date: String
+    var category: String
+    var likes: Int
+    var author: String
     
     init(id: Int, title: String, content: String, date: String, category: String, likes: Int, author: String) {
         self.id = id

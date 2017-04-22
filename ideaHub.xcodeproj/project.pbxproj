@@ -10,6 +10,7 @@
 		42D7E022D236216F49393F19 /* Pods_ideaHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C287966D07F3678E62AC2E /* Pods_ideaHub.framework */; };
 		6D16DDE0AD8F5BF40ACDD659 /* Pods_ideaHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16061D0D88226A0CCAF4180B /* Pods_ideaHubTests.framework */; };
 		CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34E2C51E8100FE00F4C774 /* Idea.swift */; };
+		CE7299631EAAF8640035BAFF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7299621EAAF8640035BAFF /* UserViewController.swift */; };
 		CE910EC21E9D42BE00137177 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE910EC11E9D42BE00137177 /* GoogleService-Info.plist */; };
 		CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9588091E62ECD60044EBB1 /* AppDelegate.swift */; };
 		CE9588111E62ECD60044EBB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95880F1E62ECD60044EBB1 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		31E1677DE3E0521645B060F7 /* Pods-ideaHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5AC3F9699E5B44B3EA60898 /* Pods-ideaHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE34E2C51E8100FE00F4C774 /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		CE7299621EAAF8640035BAFF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		CE910EC11E9D42BE00137177 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE9588061E62ECD60044EBB1 /* ideaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ideaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9588091E62ECD60044EBB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				CEF17E741E9D36C500941A0F /* LoginViewController.swift */,
 				CED1487F1E810FE400225948 /* HomeViewController.swift */,
+				CE7299621EAAF8640035BAFF /* UserViewController.swift */,
 				CE34E2C51E8100FE00F4C774 /* Idea.swift */,
 				CED1487B1E810D2100225948 /* IdeaCell.swift */,
 				CE9588091E62ECD60044EBB1 /* AppDelegate.swift */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */,
+				CE7299631EAAF8640035BAFF /* UserViewController.swift in Sources */,
 				CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */,
 				CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */,
 				CEF17E751E9D36C500941A0F /* LoginViewController.swift in Sources */,
