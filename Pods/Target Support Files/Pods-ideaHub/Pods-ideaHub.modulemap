@@ -1,0 +1,6 @@
+framework module Pods_ideaHub {
+  umbrella header "Pods-ideaHub-umbrella.h"
+
+  export *
+  module * { export * }
+}

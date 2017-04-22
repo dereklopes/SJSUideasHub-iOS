@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class HomeViewController: UITableViewController {
     @IBOutlet weak var tableview: UITableView!
@@ -15,7 +16,8 @@ class HomeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // test if logged in
         fetchIdeas()
         
         // Uncomment the following line to preserve selection between presentations
@@ -32,7 +34,7 @@ class HomeViewController: UITableViewController {
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
          
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             
@@ -44,8 +46,8 @@ class HomeViewController: UITableViewController {
                 // create an Idea object for each JSON object in dictionary
                 for ideaFromJson in json {
                     // grab data from JSON object
-                    if let title = ideaFromJson["title"] as? String, let id = ideaFromJson["ideaId"] as? Int, let content = ideaFromJson["content"] as? String, let date = ideaFromJson["date"] as? String, let category = ideaFromJson["category"] as? String, let likes = ideaFromJson["likes"] as? Int, let userId = ideaFromJson["userId"] as? Int {
-                        let idea = Idea(id: id, title: title, content: content, date: date, category: category, likes: likes, userId: userId)
+                    if let title = ideaFromJson["title"] as? String, let id = ideaFromJson["ideaId"] as? Int, let content = ideaFromJson["content"] as? String, let date = ideaFromJson["date"] as? String, let category = ideaFromJson["category"] as? String, let likes = ideaFromJson["likes"] as? Int, let author = ideaFromJson["author"] as? String {
+                        let idea = Idea(id: id, title: title, content: content, date: date, category: category, likes: likes, author: author)
                         self.ideas?.append(idea)
                     }
                 }

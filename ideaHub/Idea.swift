@@ -15,16 +15,16 @@ class Idea: NSObject {
     var date: String?
     var category: String?
     var likes: Int?
-    var userId: Int?
+    var author: String?
     
-    init(id: Int, title: String, content: String, date: String, category: String, likes: Int, userId: Int) {
+    init(id: Int, title: String, content: String, date: String, category: String, likes: Int, author: String) {
         self.id = id
         self.title = title
         self.content = content
         self.date = date
         self.category = category
         self.likes = likes
-        self.userId = userId
+        self.author = author
     }
     
 }

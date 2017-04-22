@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D7E022D236216F49393F19 /* Pods_ideaHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C287966D07F3678E62AC2E /* Pods_ideaHub.framework */; };
+		6D16DDE0AD8F5BF40ACDD659 /* Pods_ideaHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16061D0D88226A0CCAF4180B /* Pods_ideaHubTests.framework */; };
 		CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34E2C51E8100FE00F4C774 /* Idea.swift */; };
+		CE910EC21E9D42BE00137177 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE910EC11E9D42BE00137177 /* GoogleService-Info.plist */; };
 		CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9588091E62ECD60044EBB1 /* AppDelegate.swift */; };
 		CE9588111E62ECD60044EBB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95880F1E62ECD60044EBB1 /* Main.storyboard */; };
 		CE9588131E62ECD60044EBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9588121E62ECD60044EBB1 /* Assets.xcassets */; };
@@ -15,6 +18,7 @@
 		CE9588211E62ECD70044EBB1 /* ideaHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9588201E62ECD70044EBB1 /* ideaHubTests.swift */; };
 		CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487B1E810D2100225948 /* IdeaCell.swift */; };
 		CED148801E810FE400225948 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487F1E810FE400225948 /* HomeViewController.swift */; };
+		CEF17E751E9D36C500941A0F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF17E741E9D36C500941A0F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03C287966D07F3678E62AC2E /* Pods_ideaHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ideaHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F73A0EB1BE5A1873B5544D /* Pods-ideaHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHub/Pods-ideaHub.debug.xcconfig"; sourceTree = "<group>"; };
+		16061D0D88226A0CCAF4180B /* Pods_ideaHubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ideaHubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E1677DE3E0521645B060F7 /* Pods-ideaHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5AC3F9699E5B44B3EA60898 /* Pods-ideaHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE34E2C51E8100FE00F4C774 /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+		CE910EC11E9D42BE00137177 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE9588061E62ECD60044EBB1 /* ideaHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ideaHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9588091E62ECD60044EBB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9588101E62ECD60044EBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +50,8 @@
 		CE9588221E62ECD70044EBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED1487B1E810D2100225948 /* IdeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaCell.swift; sourceTree = "<group>"; };
 		CED1487F1E810FE400225948 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEF17E741E9D36C500941A0F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		CFC3E6B38CF49CDFA00D6D52 /* Pods-ideaHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHub/Pods-ideaHub.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D7E022D236216F49393F19 /* Pods_ideaHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +67,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D16DDE0AD8F5BF40ACDD659 /* Pods_ideaHubTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07990CC9D4C0AF449C89E084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03C287966D07F3678E62AC2E /* Pods_ideaHub.framework */,
+				16061D0D88226A0CCAF4180B /* Pods_ideaHubTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC5D460649491C6EA08926B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04F73A0EB1BE5A1873B5544D /* Pods-ideaHub.debug.xcconfig */,
+				CFC3E6B38CF49CDFA00D6D52 /* Pods-ideaHub.release.xcconfig */,
+				31E1677DE3E0521645B060F7 /* Pods-ideaHubTests.debug.xcconfig */,
+				B5AC3F9699E5B44B3EA60898 /* Pods-ideaHubTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE9587FD1E62ECD60044EBB1 = {
 			isa = PBXGroup;
 			children = (
 				CE9588081E62ECD60044EBB1 /* ideaHub */,
 				CE95881F1E62ECD70044EBB1 /* ideaHubTests */,
 				CE9588071E62ECD60044EBB1 /* Products */,
+				8EC5D460649491C6EA08926B /* Pods */,
+				07990CC9D4C0AF449C89E084 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +117,16 @@
 		CE9588081E62ECD60044EBB1 /* ideaHub */ = {
 			isa = PBXGroup;
 			children = (
-				CE9588091E62ECD60044EBB1 /* AppDelegate.swift */,
+				CEF17E741E9D36C500941A0F /* LoginViewController.swift */,
+				CED1487F1E810FE400225948 /* HomeViewController.swift */,
 				CE34E2C51E8100FE00F4C774 /* Idea.swift */,
 				CED1487B1E810D2100225948 /* IdeaCell.swift */,
-				CED1487F1E810FE400225948 /* HomeViewController.swift */,
+				CE9588091E62ECD60044EBB1 /* AppDelegate.swift */,
 				CE95880F1E62ECD60044EBB1 /* Main.storyboard */,
 				CE9588141E62ECD60044EBB1 /* LaunchScreen.storyboard */,
 				CE9588121E62ECD60044EBB1 /* Assets.xcassets */,
 				CE9588171E62ECD60044EBB1 /* Info.plist */,
+				CE910EC11E9D42BE00137177 /* GoogleService-Info.plist */,
 			);
 			path = ideaHub;
 			sourceTree = "<group>";
@@ -109,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9588251E62ECD70044EBB1 /* Build configuration list for PBXNativeTarget "ideaHub" */;
 			buildPhases = (
+				2910CBE0596AE9E9D05ABF77 /* [CP] Check Pods Manifest.lock */,
 				CE9588021E62ECD60044EBB1 /* Sources */,
 				CE9588031E62ECD60044EBB1 /* Frameworks */,
 				CE9588041E62ECD60044EBB1 /* Resources */,
+				B5B9D0D22468B30B319C93B9 /* [CP] Embed Pods Frameworks */,
+				A7D84CDE843293A6865944CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9588281E62ECD70044EBB1 /* Build configuration list for PBXNativeTarget "ideaHubTests" */;
 			buildPhases = (
+				0A4C2D45890DCEB542B42E0F /* [CP] Check Pods Manifest.lock */,
 				CE9588181E62ECD70044EBB1 /* Sources */,
 				CE9588191E62ECD70044EBB1 /* Frameworks */,
 				CE95881A1E62ECD70044EBB1 /* Resources */,
+				59171B40E4943ED0B6604D65 /* [CP] Embed Pods Frameworks */,
+				A293AA9AD897688226A5F36D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,6 +233,7 @@
 			files = (
 				CE9588161E62ECD60044EBB1 /* LaunchScreen.storyboard in Resources */,
 				CE9588131E62ECD60044EBB1 /* Assets.xcassets in Resources */,
+				CE910EC21E9D42BE00137177 /* GoogleService-Info.plist in Resources */,
 				CE9588111E62ECD60044EBB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +247,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A4C2D45890DCEB542B42E0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2910CBE0596AE9E9D05ABF77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59171B40E4943ED0B6604D65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A293AA9AD897688226A5F36D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ideaHubTests/Pods-ideaHubTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D84CDE843293A6865944CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ideaHub/Pods-ideaHub-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5B9D0D22468B30B319C93B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ideaHub/Pods-ideaHub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE9588021E62ECD60044EBB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -210,6 +348,7 @@
 				CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */,
 				CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */,
 				CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */,
+				CEF17E751E9D36C500941A0F /* LoginViewController.swift in Sources */,
 				CED148801E810FE400225948 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +486,7 @@
 		};
 		CE9588261E62ECD70044EBB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F73A0EB1BE5A1873B5544D /* Pods-ideaHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -354,7 +494,7 @@
 				INFOPLIST_FILE = ideaHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SJSU.ideaHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SJSU.ideasHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -362,6 +502,7 @@
 		};
 		CE9588271E62ECD70044EBB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFC3E6B38CF49CDFA00D6D52 /* Pods-ideaHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -369,7 +510,7 @@
 				INFOPLIST_FILE = ideaHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SJSU.ideaHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SJSU.ideasHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -377,6 +518,7 @@
 		};
 		CE9588291E62ECD70044EBB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31E1677DE3E0521645B060F7 /* Pods-ideaHubTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -392,6 +534,7 @@
 		};
 		CE95882A1E62ECD70044EBB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AC3F9699E5B44B3EA60898 /* Pods-ideaHubTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
