@@ -10,26 +10,70 @@ import UIKit
 import GoogleSignIn
 
 class HomeViewController: UITableViewController {
+    
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var sortButton: UIBarButtonItem!
     
     var ideas: [Idea]? = []
+    
+    enum sortTypes {
+        case newest
+        case likes
+        case oldest
+    }
+    
+    var sortBy = sortTypes.newest
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // test if logged in
+        // set up sort button
+        sortButton.action = #selector(sortIdeas(sender:))
+        sortButton.target = self
+        
+        // get ideas
         fetchIdeas()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    // brings up UIAlert to set sortBy
+    func sortIdeas(sender: UIBarButtonItem) {
+        // initialize controller
+        let sortAlert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
+        // add acitons
+        let sortActions : Set<UIAlertAction> = [
+            UIAlertAction(title: "Newest", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.newest))}),
+            UIAlertAction(title: "Oldest", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.oldest))}),
+            UIAlertAction(title: "Likes", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.likes))}),
+            UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ]
+        for sortAction in sortActions {
+            sortAlert.addAction(sortAction)
+        }
+        // show alert
+        self.present(sortAlert, animated: true)
+    }
+    
+    func setSortBy(type: sortTypes) {
+        sortBy = type
+        fetchIdeas()
+    }
+    
+    // fetches idea objects from server in JSON format
     func fetchIdeas() {
-        let urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas")!)
-        
+        var urlRequest : URLRequest
+        if (sortBy == sortTypes.newest) {
+            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=newest")!)
+        }
+        else if(sortBy == sortTypes.likes) {
+            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=likes")!)
+        } else if (sortBy == sortTypes.oldest) {
+            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=oldest")!)
+        } else {
+            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas")!)
+        }
         // create a new session for gathering info from URL
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
          
@@ -85,7 +129,8 @@ class HomeViewController: UITableViewController {
         cell.desc.text = self.ideas?[indexPath.item].content
         cell.date.text = self.ideas?[indexPath.item].date
         cell.category.text = self.ideas?[indexPath.item].category
-        cell.likes.text = String(describing: self.ideas?[indexPath.item].likes)
+        cell.likes.text = "Likes: \(self.ideas![indexPath.item].likes)"
+        //cell.likes.text = String(describing: self.ideas?[indexPath.item].likes)
 
         return cell
     }

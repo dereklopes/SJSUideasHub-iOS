@@ -28,11 +28,8 @@ class UserViewController: UIViewController {
             profilePicture.image = UIImage(data: pictureData)
         }
         
-        // set sign out functionality
-        
+        // set sign out button functionality
         signOutButton.action = #selector(googleSignOut(sender:))
-        
-        // Do any additional setup after loading the view.
     }
     
     func googleSignOut(sender: UIBarButtonItem) {
