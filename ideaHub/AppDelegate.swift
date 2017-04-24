@@ -22,9 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize Google sign-in
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "error configuring Google services: \(configureError)")
-        
+        assert(configureError == nil, "error configuring Google services: \(String(describing: configureError))")
         GIDSignIn.sharedInstance().delegate = self
+        
+        // set colors
+        UINavigationBar.appearance().barTintColor = UIColor(red: 28/255, green: 115/255, blue: 255/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
     }

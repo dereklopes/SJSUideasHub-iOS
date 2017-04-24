@@ -24,7 +24,7 @@ class UserViewController: UIViewController {
         emailLabel.text = userProfile?.email!
         if (userProfile?.hasImage)! {
             let imageUrl = userProfile?.imageURL(withDimension: 120)
-            let pictureData = NSData(contentsOf: imageUrl!) as! Data
+            let pictureData = NSData(contentsOf: imageUrl!)! as Data
             profilePicture.image = UIImage(data: pictureData)
         }
         
