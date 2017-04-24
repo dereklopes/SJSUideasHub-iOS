@@ -30,6 +30,7 @@ class UserViewController: UIViewController {
         
         // set sign out button functionality
         signOutButton.action = #selector(googleSignOut(sender:))
+        signOutButton.target = self
     }
     
     func googleSignOut(sender: UIBarButtonItem) {

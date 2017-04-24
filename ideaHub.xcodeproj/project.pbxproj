@@ -20,6 +20,7 @@
 		CED1487C1E810D2100225948 /* IdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487B1E810D2100225948 /* IdeaCell.swift */; };
 		CED148801E810FE400225948 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1487F1E810FE400225948 /* HomeViewController.swift */; };
 		CEF17E751E9D36C500941A0F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF17E741E9D36C500941A0F /* LoginViewController.swift */; };
+		CEF2BD561EAD9EFD00DE6C27 /* IdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2BD551EAD9EFD00DE6C27 /* IdeaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CED1487B1E810D2100225948 /* IdeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaCell.swift; sourceTree = "<group>"; };
 		CED1487F1E810FE400225948 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEF17E741E9D36C500941A0F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		CEF2BD551EAD9EFD00DE6C27 /* IdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaViewController.swift; sourceTree = "<group>"; };
 		CFC3E6B38CF49CDFA00D6D52 /* Pods-ideaHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ideaHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-ideaHub/Pods-ideaHub.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				CEF17E741E9D36C500941A0F /* LoginViewController.swift */,
 				CED1487F1E810FE400225948 /* HomeViewController.swift */,
+				CEF2BD551EAD9EFD00DE6C27 /* IdeaViewController.swift */,
 				CE7299621EAAF8640035BAFF /* UserViewController.swift */,
 				CE34E2C51E8100FE00F4C774 /* Idea.swift */,
 				CED1487B1E810D2100225948 /* IdeaCell.swift */,
@@ -352,6 +355,7 @@
 				CE7299631EAAF8640035BAFF /* UserViewController.swift in Sources */,
 				CE34E2C61E8100FE00F4C774 /* Idea.swift in Sources */,
 				CE95880A1E62ECD60044EBB1 /* AppDelegate.swift in Sources */,
+				CEF2BD561EAD9EFD00DE6C27 /* IdeaViewController.swift in Sources */,
 				CEF17E751E9D36C500941A0F /* LoginViewController.swift in Sources */,
 				CED148801E810FE400225948 /* HomeViewController.swift in Sources */,
 			);

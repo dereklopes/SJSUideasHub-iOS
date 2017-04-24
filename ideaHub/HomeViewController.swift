@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import os.log
 
 class HomeViewController: UITableViewController {
     
@@ -129,8 +130,7 @@ class HomeViewController: UITableViewController {
         cell.desc.text = self.ideas?[indexPath.item].content
         cell.date.text = self.ideas?[indexPath.item].date
         cell.category.text = self.ideas?[indexPath.item].category
-        cell.likes.text = "Likes: \(self.ideas![indexPath.item].likes)"
-        //cell.likes.text = String(describing: self.ideas?[indexPath.item].likes)
+        cell.likes.text = "\(self.ideas![indexPath.item].likes)"
 
         return cell
     }
@@ -170,14 +170,33 @@ class HomeViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "ShowIdea":
+            guard let ideaViewController = segue.destination as? IdeaViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedIdeaCell = sender as? IdeaCell else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let indexPath = tableview.indexPath(for: selectedIdeaCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+        
+            let selectedIdea = ideas?[indexPath.row]
+            ideaViewController.idea = selectedIdea
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
     }
-    */
-
+    
 }
