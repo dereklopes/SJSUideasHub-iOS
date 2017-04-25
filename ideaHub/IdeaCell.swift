@@ -17,6 +17,8 @@ class IdeaCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var desc: UILabel!
     
+    var author: String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

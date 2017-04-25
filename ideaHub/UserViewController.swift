@@ -43,14 +43,24 @@ class UserViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "ShowPosts":
+            guard let homeViewController = segue.destination as? HomeViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            homeViewController.author = GIDSignIn.sharedInstance().currentUser.profile.email
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
     }
-    */
 
 }

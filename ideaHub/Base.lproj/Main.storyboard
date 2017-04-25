@@ -14,7 +14,7 @@
         <!--HomeView-->
         <scene sceneID="bFI-9e-Z96">
             <objects>
-                <tableViewController title="HomeView" id="Y5p-6C-BXY" customClass="HomeViewController" customModule="ideaHub" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeViewController" title="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y5p-6C-BXY" customClass="HomeViewController" customModule="ideaHub" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="28" sectionFooterHeight="28" id="zTi-lh-XRx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,19 +146,18 @@
                                     <constraint firstAttribute="height" constant="15" id="cZc-eZ-yXj"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-ta-x6f">
-                                <rect key="frame" x="0.0" y="96" width="375" height="522"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-ta-x6f">
+                                <rect key="frame" x="0.0" y="132" width="375" height="486"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdz-U3-dAD">
-                                        <rect key="frame" x="16" y="8" width="343" height="68"/>
+                                        <rect key="frame" x="16" y="17" width="343" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMu-mi-s6F">
-                                        <rect key="frame" x="16" y="84" width="343" height="430"/>
+                                        <rect key="frame" x="16" y="84" width="343" height="395"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -166,26 +165,38 @@
                                     </label>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW0-3H-9Md">
+                                <rect key="frame" x="16" y="94" width="343" height="30"/>
+                                <state key="normal" title="email"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Oeo-Dy-A5d" firstAttribute="leading" secondItem="7qW-1e-u6K" secondAttribute="trailing" constant="1" id="1Jk-6M-d6V"/>
+                            <constraint firstAttribute="trailing" secondItem="PnA-ta-x6f" secondAttribute="trailing" id="1LT-4P-yDr"/>
                             <constraint firstItem="ohS-lS-dSa" firstAttribute="top" secondItem="1hf-Y1-JfW" secondAttribute="bottom" constant="8" symbolic="YES" id="CYA-Lc-edP"/>
+                            <constraint firstItem="PnA-ta-x6f" firstAttribute="leading" secondItem="d9d-sX-n92" secondAttribute="leading" id="G6r-Iy-iJH"/>
                             <constraint firstItem="ohS-lS-dSa" firstAttribute="baseline" secondItem="WZM-SP-p9R" secondAttribute="baseline" id="GJN-jG-Uop"/>
+                            <constraint firstItem="vW0-3H-9Md" firstAttribute="leading" secondItem="d9d-sX-n92" secondAttribute="leadingMargin" id="KLe-qc-Fh6"/>
                             <constraint firstItem="7qW-1e-u6K" firstAttribute="leading" secondItem="ohS-lS-dSa" secondAttribute="trailing" constant="8" symbolic="YES" id="M5n-QR-A1Y"/>
                             <constraint firstItem="ohS-lS-dSa" firstAttribute="leading" secondItem="d9d-sX-n92" secondAttribute="leadingMargin" id="WV9-Cu-RfB"/>
                             <constraint firstItem="ohS-lS-dSa" firstAttribute="firstBaseline" secondItem="Oeo-Dy-A5d" secondAttribute="firstBaseline" id="ZSl-Dn-BxG"/>
                             <constraint firstItem="WZM-SP-p9R" firstAttribute="trailing" secondItem="d9d-sX-n92" secondAttribute="trailingMargin" id="bha-51-eh6"/>
+                            <constraint firstItem="vW0-3H-9Md" firstAttribute="top" secondItem="Oeo-Dy-A5d" secondAttribute="bottom" constant="2" id="e8h-S0-LtY"/>
                             <constraint firstItem="7qW-1e-u6K" firstAttribute="top" secondItem="1hf-Y1-JfW" secondAttribute="bottom" constant="10" id="hg9-YO-umd"/>
                             <constraint firstItem="Oeo-Dy-A5d" firstAttribute="firstBaseline" secondItem="WZM-SP-p9R" secondAttribute="firstBaseline" id="kMD-WO-fk6"/>
+                            <constraint firstItem="5Hw-CY-fa8" firstAttribute="top" secondItem="PnA-ta-x6f" secondAttribute="bottom" id="ks1-u0-433"/>
                             <constraint firstItem="7qW-1e-u6K" firstAttribute="centerY" secondItem="Oeo-Dy-A5d" secondAttribute="centerY" id="maD-5v-4Tr"/>
                             <constraint firstItem="WZM-SP-p9R" firstAttribute="leading" secondItem="7qW-1e-u6K" secondAttribute="trailing" constant="9" id="msi-Bt-Lln"/>
+                            <constraint firstItem="vW0-3H-9Md" firstAttribute="trailing" secondItem="d9d-sX-n92" secondAttribute="trailingMargin" id="vjR-EW-kWW"/>
+                            <constraint firstItem="PnA-ta-x6f" firstAttribute="top" secondItem="vW0-3H-9Md" secondAttribute="bottom" constant="2" id="xHI-b8-uon"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryLabel" destination="WZM-SP-p9R" id="9Tm-W2-Mka"/>
                         <outlet property="dateLabel" destination="ohS-lS-dSa" id="gWu-qY-uNd"/>
                         <outlet property="descriptionLabel" destination="pMu-mi-s6F" id="bG5-KY-oP8"/>
+                        <outlet property="emailButton" destination="vW0-3H-9Md" id="4hL-OP-9IQ"/>
                         <outlet property="likesLabel" destination="Oeo-Dy-A5d" id="GmT-t8-eYK"/>
                         <outlet property="titleLabel" destination="fdz-U3-dAD" id="Xy3-TK-LoQ"/>
                     </connections>
@@ -206,26 +217,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCP-no-pwC">
-                                <rect key="frame" x="16" y="84" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-3k-egY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-3k-egY">
                                 <rect key="frame" x="144" y="111" width="215" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="op4-3g-Tag"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoA-5a-adP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoA-5a-adP">
                                 <rect key="frame" x="144" y="145" width="215" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY5-Ey-sR6">
+                                <rect key="frame" x="16" y="212" width="343" height="30"/>
+                                <state key="normal" title="View Posts"/>
+                                <connections>
+                                    <segue destination="Y5p-6C-BXY" kind="show" identifier="ShowPosts" id="fz0-9d-06s"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCP-no-pwC">
+                                <rect key="frame" x="16" y="84" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="gcA-jy-uh2"/>
+                                    <constraint firstAttribute="height" constant="120" id="tcm-lg-oSC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HY5-Ey-sR6" firstAttribute="leading" secondItem="Cam-FL-djy" secondAttribute="leadingMargin" constant="8" id="7zU-73-uvZ"/>
+                            <constraint firstItem="HY5-Ey-sR6" firstAttribute="top" secondItem="KCP-no-pwC" secondAttribute="bottom" constant="8" id="85k-Oj-7RG"/>
+                            <constraint firstItem="KCP-no-pwC" firstAttribute="leading" secondItem="HY5-Ey-sR6" secondAttribute="leading" id="Hda-Jp-SbJ"/>
+                            <constraint firstItem="hgY-3k-egY" firstAttribute="trailing" secondItem="WoA-5a-adP" secondAttribute="trailing" id="I7g-66-BtE"/>
+                            <constraint firstItem="HY5-Ey-sR6" firstAttribute="trailing" secondItem="Cam-FL-djy" secondAttribute="trailingMargin" constant="8" id="Kka-LJ-zTx"/>
+                            <constraint firstItem="WoA-5a-adP" firstAttribute="leading" secondItem="KCP-no-pwC" secondAttribute="trailing" constant="8" symbolic="YES" id="fdO-h9-5Wz"/>
+                            <constraint firstItem="WoA-5a-adP" firstAttribute="top" secondItem="hgY-3k-egY" secondAttribute="bottom" constant="8" symbolic="YES" id="fkH-rl-L9q"/>
+                            <constraint firstItem="hgY-3k-egY" firstAttribute="trailing" secondItem="HY5-Ey-sR6" secondAttribute="trailing" id="iQD-r2-1Ko"/>
+                            <constraint firstItem="hgY-3k-egY" firstAttribute="top" secondItem="zvU-Mr-r34" secondAttribute="bottom" constant="47" id="rWM-8T-Tm8"/>
+                            <constraint firstItem="KCP-no-pwC" firstAttribute="top" secondItem="zvU-Mr-r34" secondAttribute="bottom" constant="20" id="tsJ-yq-huJ"/>
+                            <constraint firstItem="hgY-3k-egY" firstAttribute="leading" secondItem="KCP-no-pwC" secondAttribute="trailing" constant="8" symbolic="YES" id="y6Q-5x-hOQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="1Ec-tI-iIC">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="4sZ-8F-ymJ"/>
@@ -239,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxj-WE-6qf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2785" y="1487"/>
+            <point key="canvasLocation" x="2784.8000000000002" y="1485.6071964017992"/>
         </scene>
         <!--BrowseViewController-->
         <scene sceneID="IpA-yq-ptu">
@@ -405,7 +440,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6uS-g4-uU3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6uS-g4-uU3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -426,7 +461,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6UF-EN-Ipr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6UF-EN-Ipr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -447,7 +482,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QgQ-7B-0rn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QgQ-7B-0rn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -468,7 +503,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nHv-tF-x0l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nHv-tF-x0l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -489,7 +524,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Hx-c4-ghS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Hx-c4-ghS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -512,6 +547,6 @@
         <image name="User" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HBa-Yh-GLv"/>
+        <segue reference="fz0-9d-06s"/>
     </inferredMetricsTieBreakers>
 </document>

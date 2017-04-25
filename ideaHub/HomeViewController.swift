@@ -20,6 +20,7 @@ class HomeViewController: UITableViewController {
     
     var category = ""
     var sortBy = "newest"
+    var author = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,16 @@ class HomeViewController: UITableViewController {
         // set title
         if category != "" {
             navBar.title = category
+        } else if author != "" {
+            // remove email ending
+            var atIndex: Int = 0
+            for (index, character) in author.characters.enumerated() {
+                if character == "@" {
+                    atIndex = index
+                }
+            }
+            let userName = author.substring(to: author.index(author.startIndex, offsetBy: atIndex))
+            navBar.title = userName
         }
         
         // set up sort button
@@ -42,15 +53,16 @@ class HomeViewController: UITableViewController {
     
     // brings up UIAlert to set sortBy
     func sortIdeas(sender: UIBarButtonItem) {
-        // initialize controller
+        // initialize alert controller
         let sortAlert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
-        // add acitons
+        // create set with actions
         let sortActions : Set<UIAlertAction> = [
             UIAlertAction(title: "Newest", style: .default, handler: {_ in (self.setSortBy(type: "newest"))}),
             UIAlertAction(title: "Oldest", style: .default, handler: {_ in (self.setSortBy(type: "oldest"))}),
             UIAlertAction(title: "Likes", style: .default, handler: {_ in (self.setSortBy(type: "likes"))}),
             UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         ]
+        // add actions to alert controller
         for sortAction in sortActions {
             sortAlert.addAction(sortAction)
         }
@@ -66,7 +78,13 @@ class HomeViewController: UITableViewController {
     // fetches idea objects from server in JSON format
     func fetchIdeas() {
         var urlRequest : URLRequest
-        let urlString = "https://derkle.pythonanywhere.com/ideas/?sort=\(sortBy)&category=\(category)"
+        // TEMPORARY: author being empty string and specified in URL returns no users, fix on backend to return all users
+        var urlString: String = ""
+        if author == "" {
+            urlString = "https://derkle.pythonanywhere.com/ideas/?sort=\(sortBy)&category=\(category)"
+        } else {
+            urlString = "https://derkle.pythonanywhere.com/ideas/?sort=\(sortBy)&category=\(category)&author=\(author)"
+        }
         urlRequest = URLRequest(url: URL(string:urlString)!)
         // create a new session for gathering info from URL
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
@@ -124,6 +142,7 @@ class HomeViewController: UITableViewController {
         cell.date.text = self.ideas?[indexPath.item].date
         cell.category.text = self.ideas?[indexPath.item].category
         cell.likes.text = "\(self.ideas![indexPath.item].likes)"
+        cell.author = self.ideas?[indexPath.item].author
 
         return cell
     }
