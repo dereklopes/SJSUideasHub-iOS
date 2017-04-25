@@ -83,10 +83,11 @@
                             <outlet property="delegate" destination="Y5p-6C-BXY" id="xp3-3d-OaH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SJSU ideaHub" id="4xO-cP-hs0">
+                    <navigationItem key="navigationItem" title="SJSU ideasHub" id="4xO-cP-hs0">
                         <barButtonItem key="rightBarButtonItem" title="Sort" id="ski-LJ-3km"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBar" destination="4xO-cP-hs0" id="bk2-Oc-lZJ"/>
                         <outlet property="sortButton" destination="ski-LJ-3km" id="5Ke-qL-1ee"/>
                         <outlet property="tableview" destination="zTi-lh-XRx" id="6gI-8D-FVT"/>
                     </connections>
@@ -240,35 +241,55 @@
             </objects>
             <point key="canvasLocation" x="2785" y="1487"/>
         </scene>
-        <!--BrowseView-->
-        <scene sceneID="raS-0f-2od">
+        <!--BrowseViewController-->
+        <scene sceneID="IpA-yq-ptu">
             <objects>
-                <viewController title="BrowseView" id="YZK-xe-xo9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j9Z-b6-0jS"/>
-                        <viewControllerLayoutGuide type="bottom" id="agD-Aw-RxE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ve0-2n-kke">
+                <tableViewController title="BrowseViewController" id="y0x-mq-hnD" customClass="BrowseTableViewController" customModule="ideaHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zp-Mx-R2Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Browse" id="xXI-LQ-ZlX"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="38" id="VTR-Br-68Y" customClass="CategoryCell" customModule="ideaHub" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VTR-Br-68Y" id="jOz-bi-rFO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="37.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwX-56-2rC">
+                                            <rect key="frame" x="8" y="9" width="359" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uwX-56-2rC" secondAttribute="bottom" constant="1" id="D0M-IT-jk5"/>
+                                        <constraint firstItem="uwX-56-2rC" firstAttribute="leading" secondItem="jOz-bi-rFO" secondAttribute="leading" constant="8" id="DuF-iN-A2W"/>
+                                        <constraint firstItem="uwX-56-2rC" firstAttribute="top" secondItem="jOz-bi-rFO" secondAttribute="topMargin" constant="1" id="eaJ-m2-YYO"/>
+                                        <constraint firstAttribute="trailing" secondItem="uwX-56-2rC" secondAttribute="trailing" constant="8" id="hKZ-cR-rZW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="uwX-56-2rC" id="R8l-XG-h88"/>
+                                    <segue destination="Y5p-6C-BXY" kind="show" identifier="ShowCategory" id="HBa-Yh-GLv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y0x-mq-hnD" id="4L1-Q5-2DW"/>
+                            <outlet property="delegate" destination="y0x-mq-hnD" id="5FU-YB-p6v"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Browse" id="y5L-6U-gqr"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="Cdh-P4-7b4" id="iVQ-EQ-Tyr"/>
+                        <outlet property="categoryTable" destination="6zp-Mx-R2Z" id="1I1-kb-W29"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7lD-bN-afh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Cdh-P4-7b4">
-                    <connections>
-                        <outlet property="delegate" destination="YZK-xe-xo9" id="fxc-Pz-Sfh"/>
-                        <outlet property="searchContentsController" destination="YZK-xe-xo9" id="bRh-3j-koh"/>
-                        <outlet property="searchResultsDataSource" destination="YZK-xe-xo9" id="iSY-TL-LqD"/>
-                        <outlet property="searchResultsDelegate" destination="YZK-xe-xo9" id="CSl-D1-FVG"/>
-                    </connections>
-                </searchDisplayController>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XkH-S3-Mev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="1487"/>
+            <point key="canvasLocation" x="4516" y="740"/>
         </scene>
         <!--MessageView-->
         <scene sceneID="Jru-3j-IJ8">
@@ -411,12 +432,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YZK-xe-xo9" kind="relationship" relationship="rootViewController" id="hhe-gR-Ajn"/>
+                        <segue destination="y0x-mq-hnD" kind="relationship" relationship="rootViewController" id="Z2D-X9-ku3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOW-5m-JbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="740"/>
+            <point key="canvasLocation" x="3652" y="740"/>
         </scene>
         <!--Messages-->
         <scene sceneID="QYa-Wr-HbH">
@@ -490,4 +511,7 @@
         <image name="Search" width="22" height="22"/>
         <image name="User" width="22" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HBa-Yh-GLv"/>
+    </inferredMetricsTieBreakers>
 </document>

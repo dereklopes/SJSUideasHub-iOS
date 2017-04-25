@@ -12,21 +12,22 @@ import os.log
 
 class HomeViewController: UITableViewController {
     
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var sortButton: UIBarButtonItem!
     
     var ideas: [Idea]? = []
     
-    enum sortTypes {
-        case newest
-        case likes
-        case oldest
-    }
-    
-    var sortBy = sortTypes.newest
+    var category = ""
+    var sortBy = "newest"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set title
+        if category != "" {
+            navBar.title = category
+        }
         
         // set up sort button
         sortButton.action = #selector(sortIdeas(sender:))
@@ -45,9 +46,9 @@ class HomeViewController: UITableViewController {
         let sortAlert = UIAlertController(title: "Sort by", message: nil, preferredStyle: .actionSheet)
         // add acitons
         let sortActions : Set<UIAlertAction> = [
-            UIAlertAction(title: "Newest", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.newest))}),
-            UIAlertAction(title: "Oldest", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.oldest))}),
-            UIAlertAction(title: "Likes", style: .default, handler: {_ in (self.setSortBy(type: sortTypes.likes))}),
+            UIAlertAction(title: "Newest", style: .default, handler: {_ in (self.setSortBy(type: "newest"))}),
+            UIAlertAction(title: "Oldest", style: .default, handler: {_ in (self.setSortBy(type: "oldest"))}),
+            UIAlertAction(title: "Likes", style: .default, handler: {_ in (self.setSortBy(type: "likes"))}),
             UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         ]
         for sortAction in sortActions {
@@ -57,7 +58,7 @@ class HomeViewController: UITableViewController {
         self.present(sortAlert, animated: true)
     }
     
-    func setSortBy(type: sortTypes) {
+    func setSortBy(type: String) {
         sortBy = type
         fetchIdeas()
     }
@@ -65,16 +66,8 @@ class HomeViewController: UITableViewController {
     // fetches idea objects from server in JSON format
     func fetchIdeas() {
         var urlRequest : URLRequest
-        if (sortBy == sortTypes.newest) {
-            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=newest")!)
-        }
-        else if(sortBy == sortTypes.likes) {
-            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=likes")!)
-        } else if (sortBy == sortTypes.oldest) {
-            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas/?sort=oldest")!)
-        } else {
-            urlRequest = URLRequest(url: URL(string:"https://derkle.pythonanywhere.com/ideas")!)
-        }
+        let urlString = "https://derkle.pythonanywhere.com/ideas/?sort=\(sortBy)&category=\(category)"
+        urlRequest = URLRequest(url: URL(string:urlString)!)
         // create a new session for gathering info from URL
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
          
