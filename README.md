@@ -8,4 +8,4 @@ For more information on the code and how to contribute, check out the [Wiki](htt
 
 Related Projects:
 
-[iOS Frontend](https://github.com/dereklopes/SJSUideasHub-Backend) | [Android Frontend](https://github.com/jennifernghi/SVCE)
+[Backend](https://github.com/dereklopes/SJSUideasHub-Backend) | [Android Frontend](https://github.com/jennifernghi/SVCE)
